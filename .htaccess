@@ -1,0 +1,10 @@
+Options +FollowSymLinks 
+RewriteEngine On
+
+# add .php as extension name
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+
